@@ -26,12 +26,14 @@ public class TestSort {
 		int arr3[]=arr;
 		int arr4[]=arr;
 		int arr5[]=arr;
+		int arr6[]=arr;
 		
 		DirectInsertSort d=new DirectInsertSort();
 		ShellSort s=new ShellSort();
 		HeapSort h=new HeapSort();
 		QuickSort q=new QuickSort();
 		BubbleSort b=new BubbleSort();
+		SimpleSelectSort ss=new SimpleSelectSort();
 		
 		long startTime1=System.currentTimeMillis();//获取开始时间
 		//d.insertSort(arr1);
@@ -58,6 +60,11 @@ public class TestSort {
 		//b.bubbleSort(arr5);
 		long endTime5=System.currentTimeMillis(); //获取结束时间
 		System.out.println("bubbleSort程序运行时间： "+(endTime5-startTime5)+"ms");
+		
+		long startTime6=System.currentTimeMillis(); //获取开始时间
+		ss.simpleSelectSort(arr6);
+		long endTime6=System.currentTimeMillis(); //获取结束时间
+		System.out.println("simpleSelectSort程序运行时间： "+(endTime6-startTime6)+"ms");
 
 
 	}
