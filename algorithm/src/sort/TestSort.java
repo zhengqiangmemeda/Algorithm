@@ -30,7 +30,7 @@ public class TestSort {
 		
 		DirectInsertSort d=new DirectInsertSort();
 		ShellSort s=new ShellSort();
-		HeapSort h=new HeapSort();
+		HeapSort h=new HeapSort(arr3);
 		QuickSort q=new QuickSort();
 		BubbleSort b=new BubbleSort();
 		SimpleSelectSort ss=new SimpleSelectSort();
@@ -46,7 +46,7 @@ public class TestSort {
 		System.out.println("ShellSort程序运行时间： "+(endTime2-startTime2)+"ms");
 		
 		long startTime3=System.currentTimeMillis(); //获取开始时间
-		h.heapSort(arr3);
+		h.heapSort();
 		long endTime3=System.currentTimeMillis(); //获取结束时间
 		System.out.println("HeapSort程序运行时间： "+(endTime3-startTime3)+"ms");
 
@@ -82,16 +82,6 @@ public class TestSort {
 		System.out.println();
 	}
 	
-	//@Test
-	public void testHeapSort()  {
-		HeapSort s=new HeapSort();
-		long startTime=System.nanoTime(); //获取开始时间
-		s.heapSort(a);
-		long endTime=System.nanoTime(); //获取结束时间
-		System.out.println("程序运行时间： "+(endTime-startTime)+"ns");
-		for(int m:a){
-			System.out.print(m+",");
-		}	
-	}
+
 
 }

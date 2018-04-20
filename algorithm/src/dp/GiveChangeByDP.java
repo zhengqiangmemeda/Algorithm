@@ -21,7 +21,8 @@ public class GiveChangeByDP {
 		for(int i=1;i<change+1;i++){
 			for(int j=0;j<moneySize.length;j++){
 				if(i>=moneySize[j]){
-					dp[i]=(dp[i-moneySize[j]]+1)>dp[i]?dp[i]:dp[i-moneySize[j]]+1;
+					//dp[i]=(dp[i-moneySize[j]]+1)>dp[i]?dp[i]:dp[i-moneySize[j]]+1;
+					dp[i]=Math.min(dp[i-moneySize[j]]+1, dp[i]);
 				}
 				
 			}
